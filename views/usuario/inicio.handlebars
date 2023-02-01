@@ -1,0 +1,52 @@
+<div class="tampar-nav">
+
+</div>
+
+<div class="login-cadastro-background">
+    <div class="login-cadastro-container">
+        <div class="design">
+            <div class="item-1 rotate-45"></div>
+            <div class="item-2 rotate-45"></div>
+            <div class="item-3 rotate-45"></div>
+            <div class="item-4 rotate-45"></div>
+        </div>
+        <div class="login">
+            {{erros}}
+            <form action="/login/done" method="POST" class="form-cadastro-login">
+                <h2 class="nome-pifa-login">PIFA 23</h2>
+                <h3 class="login-cadastro-titulo">Bem-Vindo ao Menu de Login!</h3>
+                <div>
+                    <div class="form-control">
+                        <input type="text" name="email" id="email" autocomplete="off" required>
+                        <label>
+                            <span style="transition-delay:0ms" class="first-letter">E</span><span style="transition-delay:50ms">m</span><span
+                                style="transition-delay:100ms">a</span><span
+                                style="transition-delay:150ms">i</span><span
+                                style="transition-delay:200ms">l</span>
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <input type="password" name="senha" id="senha" autocomplete="off" required>
+                        <label>
+                            <span style="transition-delay:0ms" class="first-letter">P</span><span style="transition-delay:50ms">a</span><span
+                                style="transition-delay:100ms">s</span><span
+                                style="transition-delay:150ms">s</span><span
+                                style="transition-delay:200ms">w</span><span
+                                style="transition-delay:250ms">o</span><span
+                                style="transition-delay:300ms">r</span><span 
+                                style="transition-delay:350ms">d</span>
+                        </label>
+                    </div>
+                    <a href="/cadastrar" class="link-login">
+                        Ainda não criou uma conta? Clique Aqui!
+                    </a>
+                    <div class="botao-login">
+                        <button type="submit">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

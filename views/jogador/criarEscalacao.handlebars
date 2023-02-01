@@ -1,0 +1,24 @@
+<div class="container-criar-escalacao">
+
+    <h1 class="titulo-criar-escalacao">
+        Criar Elenco
+    </h1>
+
+    <form action="criarEscalacao/novo" method="POST">
+        <input type="hidden" name="id" id="id" value="{{jogador.id}}">
+
+        <div class="nomeLineup-container">
+            <label for="nomeLineup">Nome da Elenco</label>
+            <input type="text" name="nomeLineup" id="nomeLineup" class="nomeLine-criar" maxlength="40" minlength="3" placeholder="Digite o nome Aqui" autocomplete="off" required> 
+
+            <br>
+
+            <button type="submit" class="enviar-nome-escalacao">
+                Enviar
+            </button>
+
+        </div>
+
+    </form>
+
+</div>

@@ -1,0 +1,70 @@
+<h1 class="titulo-escalacoes">
+    Minhas Escalações
+</h1>
+
+<div class="minhasEscalacoes-container">
+
+    {{#each escalacao}}
+
+    <div class="escalacao-option">
+        <div class="minhaEscalacao-foto">
+            <ion-icon name="image-outline" class="icon-foto-escalacao"></ion-icon>
+        </div>
+        <div>
+            <h1 class="nome-escalacao">
+                {{nome}}
+            </h1>
+
+            <div class="acoes-escalacao">
+
+                <!-- VER ESCALAÇÃO -->
+
+                <a href="/jogador/escalacao/{{_id}}">
+                    <button class="botao-minhaEscalacao">
+                        Ver Escalação
+                    </button>
+                </a>
+
+                <!-- FAVORITAR ESCALAÇÃO -->
+
+                <form action="favoritar" method="POST">
+                    <input type="hidden" name="id" class="id" value="{{_id}}">
+                    <button type="submit" class="apagar-escalacao">
+                        <ion-icon name="star-outline" class="icon-apagar-escalacao"></ion-icon>
+                    </button>
+                </form>
+
+                <!-- APAGAR ESCALAÇÃO -->
+
+                <form action="deletarEscalacao" method="POST">
+                    <input type="hidden" name="id" class="id" value="{{_id}}">
+                    <button type="submit" class="apagar-escalacao">
+                        <ion-icon name="trash-outline" class="icon-apagar-escalacao"></ion-icon>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    {{else}}
+
+    <h2 class="sem-amigos">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        Opss... Parece que você não possui nenhum elenco criado, que tal criar uma?
+    </h2>
+
+    {{/each}}
+
+
+</div>
+
+<a href="/jogador/criarEscalacao">
+    <button class="cta">
+        <span>Criar Elenco</span>
+        <svg viewBox="0 0 13 10" height="10px" width="15px">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+    </button>
+</a>

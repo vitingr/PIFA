@@ -1,0 +1,26 @@
+<div class="glass-cartas">
+    <div class="container-cartas-disponiveis">
+
+        {{#each cartas}}
+
+        <div class="option-carta">
+            <div class="container-foto-carta">
+                <img src="{{fotoCarta}}" class="foto-carta">
+            </div>
+
+            <a href="/jogador/listarCarta/{{_id}}">
+                <div class="vender-carta-disponivel">
+                    <h3 class="vender-carta">
+                        Vender
+                    </h3>
+                </div>
+            </a>
+        </div>
+
+        {{else}}
+
+        {{/each}}
+
+    </div>
+
+</div>

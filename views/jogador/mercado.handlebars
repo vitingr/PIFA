@@ -1,0 +1,41 @@
+<div class="container-mercado">
+
+    <h1 class="titulo-mercado">
+        Bem-Vindo ao Mercado do PIFA!
+    </h1>
+    <h2 class="subtitulo-mercado">
+        <ion-icon name="information-circle-outline"></ion-icon> Atenção! Não é possível recuperar suas cartas vendidas.
+    </h2>
+
+    <div class="flex-mercado">
+        {{#each cartas}}
+
+        <div class="carta-mercado">
+            <div class="foto-carta-mercado">
+                <img src="{{fotoCarta}}">
+            </div>
+            <div class="info-carta-mercado">
+                <h3 class="nome-carta-mercado">
+                    {{nome}}
+                </h3>
+                <p class="nomeDono-carta-mercado">
+                    {{nomeDono}}
+                </p>
+                <h4 class="preco-carta-mercado">
+                    P$ {{valorVenda}}
+                </h4>
+                <form action="/jogador/comprarCarta" method="POST">
+                    <input type="hidden" name="id" id="id" value="{{_id}}">
+                    <button type="submit" class="comprar-carta-mercado">
+                        Comprar
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        {{else}}
+
+        {{/each}}
+    </div>
+
+</div>

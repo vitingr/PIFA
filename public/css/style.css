@@ -1,0 +1,2496 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Mukta:wght@300&family=Poppins&family=Roboto:wght@300;700&family=Varela+Round&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==== CONFIGURAÇÕES GERAIS ====== */
+
+.main {
+    min-height: 100vh;
+    background: #E4E9F7;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tampar-nav {
+    position: absolute;
+    background-size: 300% 300%;
+    width: 100%;
+    height: 275px;
+    background: #E4E9F7;
+    margin-top: -1230px;
+}
+
+/* ===== REUTILIZÁVEL ======= */
+
+.mensagem-sucesso {
+    z-index: 999;
+    width: 40%;
+    margin: auto;
+    display: grid;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgb(142 229 142 / 23%);
+    color: rgb(20, 124, 20);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.mensagem-erro {
+    z-index: 999;
+    width: 40%;
+    margin: auto;
+    display: grid;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgb(243 188 188 / 54%);
+    color: rgb(171 61 61);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.container-principal {
+    margin-top: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+
+.blue {
+    color: #03588C;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ====== CONFIG NAVBAR ====== */
+
+header {
+    animation: gradiente 7.5s ease-in-out alternate infinite;
+    background: linear-gradient(270deg, #216e79, #20889b, #24b4d4, #2fbccc);
+    background-size: 300% 300%;
+}
+
+.nav {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background: transparent;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.link-nav {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-left: 30px;
+    color: white;
+}
+
+.link-nav::before,
+.link-nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform .25s;
+}
+
+.link-nav::before {
+    top: -3px;
+    transform-origin: left;
+}
+
+.link-nav::after {
+    bottom: -3px;
+    transform-origin: right;
+}
+
+.link-nav:hover::before,
+.link-nav:hover::after {
+    transform: scaleX(1);
+}
+
+.perfil-container {
+    background: rgba(255, 255, 255, 0.540);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 45px;
+}
+
+.container-nome-jogador {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.nome-jogador {
+    text-transform: uppercase;
+    font-size: 14.5px;
+    color: white;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.dinheiro-jogador {
+    color: white;
+    font-size: 13.5px;
+}
+
+.foto-jogador-container {
+    margin-left: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.foto-jogador {
+    min-width: 25px;
+    min-height: 30px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.sair-icon-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    width: 20px;
+    height: 20px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.35s;
+}
+
+.sair-icon-nav:hover {
+    color: aqua;
+}
+
+.logout-nav {
+    margin-right: 10px;
+    display: flex;
+}
+
+.pifa-logo {
+    margin-right: 200px;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.pifa-logo:hover {
+    font-size: 26.5px;
+}
+
+/* ======= LOGIN / CADASTRO ======== */
+
+.rotate-45 {
+    transform: rotate(-45deg);
+}
+
+.login-cadastro-container {
+    width: 50vw;
+    height: 60vh;
+    background: lightblue;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "login";
+    box-shadow: 0 0 17px 10px rgb(0 0 0 /30%);
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+}
+
+.design {
+    grid-area: design;
+    display: none;
+    position: relative;
+
+}
+
+.design .item-1 {
+    bottom: 0;
+    left: -40px;
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    background: linear-gradient(#ff966d, #fa538d, #89379c);
+    border-radius: 40px;
+}
+
+.design .item-2 {
+    top: -100px;
+    left: -80px;
+    position: absolute;
+    height: 450px;
+    width: 220px;
+    background: linear-gradient(#ff966d, #fa538d, #89379c);
+    border-radius: 200px;
+    border: 30px solid #e2c5e2;
+}
+
+.design .item-3 {
+    top: -100px;
+    left: 160px;
+    position: absolute;
+    height: 200px;
+    width: 100px;
+    background: linear-gradient(#ff966d, #fa538d, #89379c);
+    border-radius: 70px;
+}
+
+.design .item-4 {
+    bottom: -180px;
+    left: 220px;
+    position: absolute;
+    height: 300px;
+    width: 120px;
+    background: linear-gradient(#ff966d, #fa538d);
+    border-radius: 70px;
+}
+
+.login {
+    grid-area: login;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-cadastro-titulo {
+    font-weight: 500;
+    color: #313c4b;
+    margin-bottom: 35px;
+    font-size: 16.5px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 25px;
+    width: 275px;
+}
+
+.form-control input {
+    border-radius: 15px;
+    background: rgb(210, 228, 231);
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    color: white;
+}
+
+.form-control::placeholder {
+    margin-left: 15px;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: rgb(210, 228, 231);
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: lightblue;
+    transform: translateY(-36px);
+}
+
+.first-letter {
+    margin-left: 25px;
+}
+
+.form-cadastro-login {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+}
+
+.botao-login {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-login button {
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(105, 178, 202);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: rgb(105, 178, 202);
+}
+
+.botao-login button:before {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: rgb(105, 178, 202);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.botao-login button:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.botao-login button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.botao-login button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.botao-login button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+}
+
+.nome-pifa-login {
+    font-size: 22.5px;
+    color: #313c4b;
+}
+
+.link-login {
+    text-underline-offset: 3px;
+    font-size: 13px;
+    color: #1e72a7;
+}
+
+/* ======== MENU PRINCIPAL ======= */
+
+
+.menu-principal-container {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1800px;
+}
+
+.container-inicio {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    gap: 150px;
+}
+
+.container-inicio .box-admin {
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.938);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.container-inicio #box-verde::before {
+    content: '';
+    position: absolute;
+    inset: -10px 50px;
+    border-top: 4px solid #89ec5b;
+    border-bottom: 4px solid #89ec5b;
+    z-index: -1;
+    transform: skewY(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-verde:hover::before {
+    transform: skewY(0deg);
+    inset: -10px 50px;
+}
+
+.container-inicio #box-verde::after {
+    content: '';
+    position: absolute;
+    inset: 60px -10px;
+    border-left: 4px solid #89ec5b;
+    border-right: 4px solid #89ec5b;
+    z-index: -1;
+    transform: skew(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-verde:hover::after {
+    transform: skew(0deg);
+    inset: 60px -10px;
+}
+
+.container-inicio #box-azul::before {
+    content: '';
+    position: absolute;
+    inset: -10px 50px;
+    border-top: 4px solid #5b98eb;
+    border-bottom: 4px solid #5b98eb;
+    z-index: -1;
+    transform: skewY(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-azul:hover::before {
+    transform: skewY(0deg);
+    inset: -10px 50px;
+}
+
+.container-inicio #box-rosa::before {
+    content: '';
+    position: absolute;
+    inset: -10px 50px;
+    border-top: 4px solid #E35194;
+    border-bottom: 4px solid #E35194;
+    z-index: -1;
+    transform: skewY(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-rosa:hover::before {
+    transform: skewY(0deg);
+    inset: -10px 50px;
+}
+
+.container-inicio #box-azul::after {
+    content: '';
+    position: absolute;
+    inset: 60px -10px;
+    border-left: 4px solid #5b98eb;
+    border-right: 4px solid #5b98eb;
+    z-index: -1;
+    transform: skew(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-azul:hover::after {
+    transform: skew(0deg);
+    inset: 60px -10px;
+}
+
+.container-inicio #box-rosa::after {
+    content: '';
+    position: absolute;
+    inset: 60px -10px;
+    border-left: 4px solid #E35194;
+    border-right: 4px solid #E35194;
+    z-index: -1;
+    transform: skew(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-rosa:hover::after {
+    transform: skew(0deg);
+    inset: 60px -10px;
+}
+
+.container-inicio #box-laranja::before {
+    content: '';
+    position: absolute;
+    inset: -10px 50px;
+    border-top: 4px solid #ec9c5b;
+    border-bottom: 4px solid #ec9c5b;
+    z-index: -1;
+    transform: skewY(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-laranja:hover::before {
+    transform: skewY(0deg);
+    inset: -10px 50px;
+}
+
+.container-inicio #box-laranja::after {
+    content: '';
+    position: absolute;
+    inset: 60px -10px;
+    border-left: 4px solid #ec9c5b;
+    border-right: 4px solid #ec9c5b;
+    z-index: -1;
+    transform: skew(15deg);
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio #box-laranja:hover::after {
+    transform: skew(0deg);
+    inset: 60px -10px;
+}
+
+.container-inicio .box-admin .content-admin {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container-inicio .box-admin .content-admin .icon-adm {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio .box-admin:hover .content-admin #icon-verde {
+    background: #89ec5b;
+    color: #2e2e2e;
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 300px #89ec5b;
+}
+
+.container-inicio .box-admin:hover .content-admin #icon-azul {
+    background: #5b98eb;
+    color: #2e2e2e;
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 300px #5b98eb;
+}
+
+.container-inicio .box-admin:hover .content-admin #icon-rosa {
+    background: #E35194;
+    color: #2e2e2e;
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 300px #E35194;
+}
+
+.container-inicio .box-admin:hover .content-admin #icon-laranja {
+    background: #ec9c5b;
+    color: #2e2e2e;
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 300px #ec9c5b;
+}
+
+.container-inicio .box-admin .content-admin .conteudo-adm .title-adm {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    color: #2e2e2e;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio .box-admin:hover .content-admin .conteudo-adm .title-adm {
+    color: #2e2e2e;
+}
+
+.container-inicio .box-admin .content-admin .conteudo-adm .texto-adm {
+    font-family: 'Poppins', sans-serif;
+    color: #2e2e2e;
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio .box-admin:hover .content-admin .conteudo-adm .texto-adm {
+    color: #2e2e2e;
+}
+
+.container-inicio .box-admin .content-admin .conteudo-adm .botao-adm {
+    position: relative;
+    color: white;
+    padding: 8px 15px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+#icon-verde {
+    color: #89ec5b;
+    box-shadow: 0 0 0 2px #2e2e2e, 0 0 0 6px #89ec5b;
+    transition: 0.5s ease-in-out;
+}
+
+#icon-azul {
+    color: #5b98eb;
+    box-shadow: 0 0 0 2px #2e2e2e, 0 0 0 6px #5b98eb;
+    transition: 0.5s ease-in-out;
+}
+
+#icon-rosa {
+    color: #E35194;
+    box-shadow: 0 0 0 2px #2e2e2e, 0 0 0 6px #E35194;
+    transition: 0.5s ease-in-out;
+}
+
+#icon-laranja {
+    color: #ec9c5b;
+    box-shadow: 0 0 0 2px #2e2e2e, 0 0 0 6px #ec9c5b;
+    transition: 0.5s ease-in-out;
+}
+
+#botao-verde {
+    border-radius: 5px;
+    animation: gradiente 7.5s ease-in-out alternate infinite;
+    background: linear-gradient(270deg, #5ea367, #6EBD4A, #89ec5b, #63b83b);
+    background-size: 300% 300%;
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio .box-admin:hover .content-admin .conteudo-adm #botao-verde {
+    background: #2e2e2e;
+    color: #89ec5b;
+}
+
+#botao-azul {
+    border-radius: 5px;
+    animation: gradiente 7.5s ease-in-out alternate infinite;
+    background: linear-gradient(270deg, #5976af, #4470AD, #5B98EB, #5891E0);
+    background-size: 300% 300%;
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio .box-admin:hover .content-admin .conteudo-adm #botao-azul {
+    background: #2e2e2e;
+    color: #5b98eb;
+}
+
+#botao-rosa {
+    border-radius: 5px;
+    animation: gradiente 7.5s ease-in-out alternate infinite;
+    background: linear-gradient(270deg, #C73072, #D44482, #E35194, #FF77B7);
+    background-size: 300% 300%;
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio .box-admin:hover .content-admin .conteudo-adm #botao-rosa {
+    background: #2e2e2e;
+    color: #E35194;
+}
+
+#botao-laranja {
+    border-radius: 5px;
+    animation: gradiente 7.5s ease-in-out alternate infinite;
+    background: linear-gradient(270deg, #F28705, #ec9c5b, #F29F05, #F2B705);
+    background-size: 300% 300%;
+    transition: 0.5s ease-in-out;
+}
+
+.container-inicio .box-admin:hover .content-admin .conteudo-adm #botao-laranja {
+    background: #2e2e2e;
+    color: #ec9c5b;
+}
+
+/* ======== LOJA ========== */
+
+.container-produtos-loja {
+    max-width: 1260px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 50px;
+    position: relative;
+    width: 320px;
+    height: 425px;
+    background: #122936;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform: skewY(345deg);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+#especial:before {
+    background: linear-gradient(50deg, #09061b, #1f1a3f, #5E53A6, #8911D9, #9913F2);
+}
+
+#gold:before {
+    background: linear-gradient(50deg, #ddb74e, #f3d688, #f8e5b2);
+}
+
+#silver:before {
+    background: linear-gradient(50deg, #868686, #BBBBBB, #EAEAEA);
+}
+
+#bronze:before {
+    background: linear-gradient(50deg, #925d3e, #A66641, #BF834E);
+}
+
+.card:hover::before {
+    transform: skewY(390deg);
+    top: -70%;
+}
+
+.card .img-box {
+    position: relative;
+    width: 55%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card .img-box img {
+    max-width: 100%;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.card:hover .img-box img {
+    max-width: 60%;
+}
+
+.card .content-box {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.card .content-box .titulo-produto-loja {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card .content-box .preco-produto-loja {
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.card .content-box .descricao-produto-loja {
+    color: white;
+    font-size: 13.5px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card .content-box .comprar-produto {
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    opacity: 0;
+    padding: 10px 20px;
+    margin-top: 35px;
+    color: white;
+    background: linear-gradient(50deg, #d6af45, #d1b874, #b6a371);
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.card:hover .content-box .comprar-produto {
+    top: 0px;
+    opacity: 1;
+}
+
+/* ====== EDITAR CLUBE ====== */
+
+#profile {
+    padding-top: 35px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.top-meu-clube-content {
+    margin-left: 25px;
+}
+
+.meu-clube-container {
+    border-radius: 20px;
+    box-shadow: 0 0 17px 10px rgba(0, 0, 0, 0.144);
+    background: white;
+    width: 520px;
+    height: 900px;
+}
+
+.shape-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 520px;
+    height: 100px;
+    background: #122f57;
+}
+
+.custom-shape-divider-top-1673311169 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1673311169 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 104px;
+}
+
+.custom-shape-divider-top-1673311169 .shape-fill {
+    fill: #122f57;
+}
+
+.meu-clube-content {
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-meu-clube-content {
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17.5px;
+}
+
+.foto-meu-clube-content img {
+    min-width: 35px;
+    min-height: 40px;
+    max-width: 60px;
+    max-height: 65px;
+    width: 100%;
+    height: 100%;
+}
+
+.nomes-meu-clube-content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomeClube-meu-clube-content {
+    font-weight: bold;
+    font-size: 18.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.nome-meu-clube-content {
+    font-size: 15px;
+    text-align: center;
+}
+
+.mid-meu-clube-content {
+    display: flex;
+    align-items: center;
+    padding-left: 75px;
+    width: 520px;
+    margin-top: 50px;
+}
+
+.xp {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.lvlXP {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background: #8cd9ec;
+    color: white;
+}
+
+.textXP {
+    font-size: 15px;
+    margin-left: 12.5px;
+}
+
+.ver-minhas-cartas {
+    margin-left: 75px;
+}
+
+.ver-minhas-cartas button {
+    cursor: pointer;
+    background: white;
+    padding: 8.5px;
+    border: 0.75px solid #279daa;
+    border-radius: 10px;
+    color: #279daa;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.ver-minhas-cartas button:hover {
+    background: #279daa;
+    color: white;
+}
+
+.info-meu-clube {
+    margin-top: 45px;
+    font-weight: 600;
+    font-size: 19.5px;
+    color: #122f57;
+}
+
+.bottom-meu-clube-content {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bottom-meu-clube-content div ion-icon {
+    width: 30px;
+    height: 50px;
+}
+
+.bottom-meu-clube-content div {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #4899acc9;
+}
+
+.escudo-container {
+    margin-left: 40px;
+    display: flex;
+}
+
+.editar-escudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.editar-escudo button {
+    background: transparent;
+}
+
+.editar-escudo ion-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.editar-escudo ion-icon:hover {
+    cursor: pointer;
+    color: #122f57;
+    background: #d5f7ff98;
+}
+
+/* ======= TROCAR ESCUDO ======= */
+
+.glass-escudos {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 100px;
+}
+
+.container-escudos-disponiveis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 750px;
+    gap: 75px;
+}
+
+.foto-escudo {
+    background: rgba(255, 255, 255, 0.527);
+    border-radius: 20px;
+    padding: 20px;
+    min-width: 125px;
+    min-height: 135px;
+    width: 100%;
+    height: 135px;
+}
+
+.selecionarEscudo {
+    margin-top: 7.5px;
+    color: white;
+    border-radius: 20px;
+    background: #122f57;
+    padding: 7.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecionarEscudo input {
+    cursor: pointer;
+}
+
+.selecionar {
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 7.5px;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
+
+/* ======== CARTAS DO PACOTE ======== */
+
+.cartas-geradas-container {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(43, 43, 43, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 750px;
+    min-height: 1050px;
+    padding: 50px;
+}
+
+.carta-gerada {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    width: 650px;
+    height: 115px;
+    background: white;
+}
+
+.carta-gerada-jogador {
+    width: 95px;
+    height: 125px;
+}
+
+.info-carta-gerada {
+    margin-left: 3.5px;
+}
+
+.info-carta-gerada h3 {
+    margin-bottom: 10px;
+    font-size: 17.5px;
+    color: #2e2e2e;
+}
+
+.info-carta-gerada p {
+    font-size: 13.5px;
+}
+
+.precoMin,
+.precoMax {
+    background: transparent;
+    color: #cead1d;
+}
+
+.botao-venda-rapida {
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-block;
+    width: 110px;
+    height: 32px;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #35a1b9;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 13px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #35a1b9;
+    margin-left: 275px;
+}
+
+.botao-venda-rapida:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #35a1b9;
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.botao-venda-rapida:hover {
+    color: #fff;
+}
+
+.botao-venda-rapida:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+
+.botao-venda-rapida:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.botao-venda-rapida:active:before {
+    background: #35a1b9;
+    transition: background 0s;
+}
+
+/* ===== MINHAS CARTAS ======= */
+
+.glass-cartas {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.container-cartas-disponiveis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1250px;
+    gap: 25px;
+}
+
+.foto-carta {
+    background: rgba(255, 255, 255, 0.384);
+    border-radius: 20px;
+    padding: 20px;
+    width: 205px;
+    height: 265px;
+}
+
+.vender-carta-disponivel {
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    cursor: pointer;
+    margin-top: 7.5px;
+    color: white;
+    border-radius: 20px;
+    background: #35a1b9;
+    padding: 7.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.vender-carta-disponivel:hover {
+    background: #3ab4a0;
+}
+
+.vender-carta {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 7.5px;
+}
+
+/* ===== LISTAR CARTAS ====== */
+
+.container-listar-carta {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 775px;
+    width: 500px;
+}
+
+
+.botao-listar {
+    margin: auto;
+    margin-top: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    background: royalblue;
+    color: white;
+    padding: 10px 15px;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.botao-listar span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao-listar svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.botao-listar:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.botao-listar:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.botao-listar:hover span {
+    transform: translateX(5em);
+}
+
+.botao-listar:active {
+    transform: scale(0.95);
+}
+
+.form-listar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-listar label {
+    font-weight: bold;
+    font-size: 20px;
+    color: #34b1be;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+.input-listar {
+    margin: auto;
+    width: 350px;
+    padding: 10px;
+    border-radius: 7.5px;
+    border-bottom: 1px solid #35a1b9;
+    outline: 0;
+}
+
+.input-listar:focus {
+    outline: 0;
+}
+
+.foto-carta-listar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 65px;
+}
+
+.nome-jogador-listar {
+    color: #279daa;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.value-listar {
+    background: none;
+    text-decoration: none;
+    color: #279daa;
+}
+
+.info-listar {
+    border-radius: 5px;
+    border-left: 0.75px solid #279daa46;
+    border-top: 0.75px solid #279daa46;
+    padding: 25px;
+}
+
+.info-listar p {
+    margin: 5px;
+}
+
+/* ====== MERCADO ======= */
+
+.container-mercado {
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    min-height: 1000px;
+    width: 1225px;
+}
+
+.flex-mercado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.carta-mercado {
+    border-radius: 15px;
+    width: 250px;
+    height: 395px;
+    background: rgba(255, 255, 255, 0.39);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.foto-carta-mercado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.foto-carta-mercado img {
+    width: 180px;
+    height: 250px;
+}
+
+.info-carta-mercado {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 160px;
+    background: #122936;
+}
+
+.nome-carta-mercado {
+    color: white;
+    margin-top: -15px;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.preco-carta-mercado {
+    text-align: center;
+    color: #d6af45;
+}
+
+.comprar-carta-mercado {
+    background: rgba(255, 255, 255, 0.39);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 25px;
+    padding: 5px;
+    color: white;
+    background: #967d3a;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.titulo-mercado {
+    color: #105961;
+    text-align: center;
+}
+
+.subtitulo-mercado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    color: #105961;
+    text-align: center;
+    font-size: 16.5px;
+    margin-bottom: 75px;
+}
+
+.subtitulo-mercado ion-icon {
+    margin-right: 5px;
+}
+
+.nomeDono-carta-mercado {
+    margin-top: -3px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+}
+
+/* ======= AMIGOS ======== */
+
+.container-amigos {
+    width: 675px;
+    height: 950px;
+}
+
+.titulo-amigos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27.5px;
+    color: #20889b;
+    text-align: center;
+}
+
+.titulo-amigos ion-icon {
+    margin-left: 5px;
+}
+
+.sem-amigos {
+    color: #234567;
+    border-radius: 20px;
+    background: aliceblue;
+    border: 1px solid #03588C;
+    padding: 50px;
+    font-weight: normal;
+    font-size: 20.5px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sem-amigos ion-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
+
+#amigos-pendentes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qtd-amigos-pendentes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    background: white;
+    color: #03588C;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.amigo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 20px;
+    width: 675px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.521);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.foto-amigo {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+.foto-amigo img {
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 25px;
+    min-height: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+.nome-amigo {
+    color: #105961;
+}
+
+.info-amigo {
+    width: 300px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-amigo {
+    margin-left: 175px;
+    display: flex;
+    align-items: center;
+    color: #22778a;
+    width: 30px;
+    height: 30px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.delete-amigo:hover {
+    color: #24b4d4;
+}
+
+.botao-deletar-amigo {
+    cursor: pointer;
+    background: transparent;
+}
+
+.config-top-amigos {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.config-top-amigos div {
+    cursor: pointer;
+    padding: 2.5px;
+    border-radius: 20px;
+    text-align: center;
+    width: 200px;
+    color: white;
+    background: #78b7ca;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.config-top-amigos div:hover {
+    background: #629aac;
+}
+
+#meus-amigos {
+    margin-right: 25px;
+}
+
+.enviar-convite {
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #74c3db;
+    background: #74c3db;
+    color: white;
+    border-radius: 10px;
+    margin-left: 125px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.enviar-convite:hover {
+    background: white;
+    color: #74c3db;
+    border: 1px solid #74c3db;
+}
+
+/* ======== AMIGOS PENDENTES ========== */
+
+.amigo-pendente {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 20px;
+    width: 675px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.521);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.foto-amigo-pendente {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+.foto-amigo-pendente img {
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 25px;
+    min-height: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+.nome-amigo-pendente {
+    color: #105961;
+}
+
+.info-amigo-pendente {
+    width: 300px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.acoes-amigo-pendente {
+    width: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.rejeitar-convite {
+    width: 85px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #e28095b6;
+    background: #e28095b6;
+    color: rgb(126, 26, 26);
+    border-radius: 10px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.confirmar-convite {
+    margin-right: 20px;
+    width: 85px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid #6cca8486;
+    background: #80e29886;
+    color: rgb(27, 110, 27);
+    border-radius: 10px;
+    margin-left: 30px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.rejeitar-convite:hover {
+    border: 1px solid #ad2d49b6;
+    background: #ad2d49b6;
+    color: rgb(63, 4, 4);
+}
+
+.confirmar-convite:hover {
+    border: 1px solid #2fc0539f;
+    background: #2fc0539f;
+    color: rgb(16, 71, 16);
+}
+
+/* ======== ESCALACAO ========= */
+
+.titulo-escalacoes {
+    margin-bottom: 50px;
+    cursor: pointer;
+    color: #2e2e2e;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.titulo-escalacoes:hover {
+    color: #27927f;
+}
+
+.minhasEscalacoes-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    min-height: 500px;
+    gap: 100px;
+}
+
+.escalacao-option {
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    padding: 25px;
+    width: 325px;
+    height: 315px;
+    border-radius: 10px;
+    background: white;
+}
+
+.minhaEscalacao-foto {
+    height: 100px;
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(-20deg, #35F29A, #38F2AE, #04BF9D, #35ac84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-foto-escalacao {
+    color: #144d5a;
+    width: 50px;
+    height: 50px;
+}
+
+.nome-escalacao {
+    margin-top: 12.5px;
+    margin-bottom: -10px;
+    font-size: 23.5px;
+    color: #093640;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.forca-escalacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #35ac84;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.botao-minhaEscalacao {
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    background: #35ac84;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.botao-minhaEscalacao:hover {
+    box-shadow: none;
+    background: #68c5a6;
+}
+
+.acoes-escalacao {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apagar-escalacao {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.icon-apagar-escalacao {
+    color: #289671;
+    background: transparent;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.icon-apagar-escalacao:hover {
+    color: #68c5a6;
+}
+
+.escalacao-container {
+    width: 985px;
+    height: 855px;
+    background: center center transparent url(https://futhead.cursecdn.com/static/img/squad-builder/fieldbg.png) no-repeat;
+}
+
+.carta-escalacao {
+    cursor: pointer;
+    background: center center url(https://www.futbin.com/design/img/builder_imgs/23/Card.png?v=2) no-repeat;
+    width: 155px;
+    height: 215px;
+}
+
+.img-carta-escalacao {
+    margin-left: -2px;
+    width: 160px;
+    height: 220px;
+}
+
+.container-cartas-escalacao {
+    margin-top: 10px;
+}
+
+.container-cartas-escalacao button {
+    background: transparent;
+}
+
+.atacantes-escalacao {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meias-escalacao {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.defensores-escalacao {
+    gap: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goleiro-escalacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ======= CRIAR ESCALAÇÃO ======== */
+
+.titulo-criar-escalacao {
+    font-size: 22.5px;
+    color: #2e2e2e;
+    margin-bottom: 35px;
+}
+
+.container-criar-escalacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 300px;
+    width: 500px;
+}
+
+.nomeLineup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomeLineup-container label {
+    margin-bottom: 5px;
+}
+
+.nomeLine-criar {
+    margin: auto;
+    width: 350px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #20899b65;
+    outline: 0;
+}
+
+.nomeLineup-criar:focus {
+    outline: 0;
+}
+
+.enviar-nome-escalacao {
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px;
+    background: #03588C;
+    color: white;
+    font-weight: bold;
+}
+
+.botao-escolher-carta {
+    width: 200px;
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    cursor: pointer;
+    margin-top: 7.5px;
+    color: white;
+    border-radius: 20px;
+    background: #35a1b9;
+    padding: 7.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.botao-escolher-carta:hover {
+    background: #3ab4a0;
+}
+
+/* PVP */
+
+.pvp-inicio-container {
+    padding: 50px;
+    height: 750px;
+    max-width: 1280px;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.521);
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.titulo-pifa-pvp {
+    cursor: pointer;
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+    text-decoration: none;
+    animation: gradiente 5s ease-in-out alternate infinite;
+    background: linear-gradient(270deg, #590222, #8C0343, #270128, #F28705, #F2522E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.pvp-inicio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pvp-acoes-container {
+    margin-top: 75px;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.ranking-nome {
+    text-transform: uppercase;
+    font-size: 27.5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ranking-global {
+    text-align: center;
+}
+
+.pontos-pvp {
+    text-align: center;
+}
+
+.ranking-foto img {
+    width: 275px;
+    height: 275px;
+}
+
+.pvp-proximo-rank {
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+    color: #F2522E;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.pvp-proximo-rank:hover {
+    color: #F28705;
+}
+
+.pifa-pvp-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pvp-explicacao {
+    text-align: justify;
+}
+
+.procurar-partida-offline {
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 75px;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    font-size: 16.5px;
+    animation: gradiente 5s ease-in-out alternate infinite;
+    background: linear-gradient(25deg, #8C442A, #F27244, #F28729, #F2C879);
+    box-shadow: 0 0 17px 10px rgb(0 0 0 /30%);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.procurar-partida-offline:hover {
+    box-shadow: none;
+}
+
+.titulo-pvp-explicacao {
+    font-size: 22.5px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ========= ACEITAR ADVERSÁRIO ========= */
+
+.aceitar-batalha-container {
+    background: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    padding: 25px;
+    width: 400px;
+    height: 525px;
+}
+
+.titulo-adversario {
+    text-align: center;
+    color: #2ba4b9;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.escudo-adversario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.escudo-adversario img {
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 65px;
+    max-height: 65px;
+}
+
+.nome-adversario {
+    margin-top: 15px;
+    font-size: 14.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-adversario {
+    margin-top: 35px;
+    padding-left: 15px;
+    margin-bottom: 50px;
+}
+
+.aceitar-adversario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.text-info-adversario {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.text-info-adversario ion-icon {
+    color: #03588C;
+    margin-right: 10px;
+}
+
+.valor-adversario {
+    margin-left: 2.5px;
+    background: none;
+    text-decoration: none;
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+.valor-rank-adversario {
+    margin-left: 2.5px;
+    background: none;
+    text-decoration: none;
+    color: #cead1d;
+}
+
+.aceitar-adversario button {
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    color: white;
+    background: #2ba4b9;
+    cursor: pointer;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.aceitar-adversario button:hover {
+    background: #3bc6df;
+}
+
+.escolha-sua-carta {
+    z-index: 2;
+    margin-top: -200px;
+    padding: 1px;
+    margin-bottom: 25px;
+}
+
+.placar-offline {
+    margin-bottom: 50px;
+    color: #279daa;
+}
+
+/* ======= ESCOLHER ATRIBUTO ======= */
+
+.escolher-atributo-container {
+    background: rgba(255, 255, 255, 0.527);
+    border-radius: 20px;
+    padding: 25px;
+    width: 300px;
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-carta-atributo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 300px;
+}
+
+.foto-carta-atributo img {
+    width: 220px;
+    height: 300px;
+}
+
+.atributos {
+    width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.atributos a button {
+    cursor: pointer;
+    padding: 7.5px;
+    background: #03588C;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.atributos form button:hover {
+    background: #277fb6;
+}
+
+/* ===== CONTAINER RECOMPENSAS ====== */
+
+.recompensas-container {
+    margin-right: 150px;
+    margin-left: 315px;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 25px;
+    background: white;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 17px 10px rgba(136, 136, 136, 0.3);
+}
+
+.meu-ranking-recompensas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+}
+
+.meu-ranking-recompensas img {
+    min-width: 50px;
+    min-height: 50px;
+    max-height: 250px;
+    height: 200px;
+}
+
+.recompensas-pvpOffline {
+    text-align: center;
+    margin-top: -50px;
+}
+
+.recompensas-resultados {
+    color: #2e2e2e;
+}
+
+.recompensas-pontos {
+    font-weight: 500;
+    color: #0aac8e;
+}
+
+.meu-ranking-recompensas a {
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    color: none;
+}
+
+.botao-avancar-recompensas {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #0e9b81;
+    color: #0e9b81;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.botao-avancar-recompensas:hover {
+    background: #0e9b81;
+    color: white;
+}
+
+.flex-recompensas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-adversario-title {
+    cursor: pointer;
+    color: #0e9b81;
+    text-align: center;
+    margin-top: -60px;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.time-adversario-title:hover {
+    color: #3cd1b6;
+}
+
+
+/* ======= ANIMAÇÕES ========= */
+
+@keyframes gradiente {
+    from {
+        background-position: 0 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+/* ======= RESPONSIVIDADE ======== */
+
+@media (min-width: 768px) {
+    .login-cadastro-container {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "design login";
+    }
+
+    .design {
+        display: block;
+    }
+}

@@ -1,0 +1,42 @@
+<h1 class="titulo-escalacoes">
+    Escolha um Elenco
+</h1>
+
+<div class="minhasEscalacoes-container">
+
+    {{#each escalacao}}
+
+        <div class="escalacao-option">
+            <div class="minhaEscalacao-foto">
+                <ion-icon name="image-outline" class="icon-foto-escalacao"></ion-icon>
+            </div>
+            <div>
+                <h1 class="nome-escalacao">
+                    {{nome}}
+                </h1>
+                
+                <div class="acoes-escalacao">
+
+                    <!-- VER ESCALAÇÃO -->
+                    
+                    <a href="/jogador/pvpOffline/encontrarAdversario/{{_id}}">
+                        <button class="botao-minhaEscalacao">
+                            Escolher
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    {{else}}
+
+        <h2 class="sem-amigos">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            Opss... Parece que você não possui nenhum elenco criado!
+        </h2>
+
+    {{/each}}
+
+
+</div>

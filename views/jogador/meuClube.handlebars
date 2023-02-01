@@ -1,0 +1,92 @@
+<div class="meu-clube-container">
+    <div class="shape-top">
+        <h1 id="profile">Meu Perfil</h1>
+    </div>
+    <div class="custom-shape-divider-top-1673311169">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <div class="meu-clube-content">
+
+        <div class="top-meu-clube-content">
+            <div class="escudo-container">
+                <div class="foto-meu-clube-content">
+                    <img src="{{jogador.escudo}}">
+                </div>
+
+                <a href="/jogador/editarEscudo/{{jogador.id}}">
+                    <div class="editar-escudo">
+                        <button>
+                            <ion-icon name="create-outline"></ion-icon>
+                        </button>
+                    </div>
+                </a>
+            </div>
+            <div class="nomes-meu-clube-content">
+                <p class="nomeClube-meu-clube-content">{{jogador.nomeClube}}</p>
+                <p class="nome-meu-clube-content">{{jogador.nome}}</p>
+            </div>
+        </div>
+
+        <div class="mid-meu-clube-content">
+            <div class="xp">
+                <div class="lvlXP">
+                    <p>{{jogador.lvlXP}}</p>
+                </div>
+                <div class="textXP">
+                    <p>LVL Atual: <span class="blue">{{jogador.lvlXP}}</span></p>
+                    <p>Qtd. XP: <span class="blue">0{{jogador.ptsXP}} pontos</span></p>
+                </div>
+            </div>
+
+            <div class="ver-minhas-cartas">
+                <a href="/jogador/minhasCartas">
+                    <button>
+                        Ver Minhas Cartas
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <h2 class="info-meu-clube">
+            Outras Informações
+        </h2>
+
+        <div class="bottom-meu-clube-content">
+            <div id="meu-clube-div1">
+                <ion-icon name="cash-outline"></ion-icon>
+                <p>Dinheiro Atual:</p>
+                <p>P$ {{jogador.dinheiro}}</p>
+            </div>
+            <div id="meu-clube-div2">
+                <ion-icon name="id-card-outline"></ion-icon>
+                <p>Qtd. de Cartas:</p>
+                {{#if jogador.cartas}}
+                <p>{{jogador.cartas}}</p>
+                {{else}}
+                <p>0</p>
+                {{/if}}
+            </div>
+            <div id="meu-clube-div3">
+                <ion-icon name="trophy-outline"></ion-icon>
+                <p>Jogos Ganhos:</p>
+                <p>0</p>
+            </div>
+            <div id="meu-clube-div4">
+                <ion-icon name="people-outline"></ion-icon>
+                <p>Amigos Adicionados:</p>
+                {{#if amigos}}
+                <p>{{amigos}}</p>
+                {{else}}
+                <p>0</p>
+                {{/if}}
+                
+            </div>
+        </div>
+
+    </div>
+</div>

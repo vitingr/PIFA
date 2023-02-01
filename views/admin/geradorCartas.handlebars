@@ -1,0 +1,126 @@
+<div class="add-cartas">
+    <h1>Adcione Cartas</h1>
+
+    <form action="/admin/gerarCarta" method="POST">
+
+        <label for="nome">Nome Jogador:</label>
+        <input type="text" name="nome" id="nome"> <br>
+
+        <label for="clube">Nome do Clube</label>
+        <select name="clube" id="clube">
+            <option value="AmericaMG">América Mineiro</option>
+            <option value="AthleticoPR">Athlético Paranaense</option>
+            <option value="AtleticoMG">Atlético Mineiro</option>
+            <option value="Bahia">Bahia</option>
+            <option value="Botafogo">Botafogo</option>
+            <option value="Bragantino">RB Bragantino</option>
+            <option value="Corinthians">Corinthians</option>
+            <option value="Coritiba">Coritiba</option>
+            <option value="Cruzeiro">Cruzeiro</option>
+            <option value="Cuiaba">Cuiabá</option>
+            <option value="Flamengo">Flamengo</option>
+            <option value="Fluminense">Fluminense</option>
+            <option value="Fortaleza">Fortaleza</option>
+            <option value="Goias">Goiás</option>
+            <option value="Gremio">Grêmio</option>
+            <option value="Internacional">Internacional</option>
+            <option value="Palmeiras">Palmeiras</option>
+            <option value="Santos">Santos</option>
+            <option value="SaoPaulo">São Paulo</option>
+            <option value="Vasco">Vasco da Gama</option>
+            <option value="Idolos">Idolos</option>
+        </select> <br>
+
+        <label for="liga">Liga</label>
+        <select name="liga" id="liga">
+            <option value="ligaArgentina">Liga Argentina</option>
+            <option value="ligaBolivia">Liga Bolívia</option>
+            <option value="ligaBrasil">Liga Brasil</option>
+            <option value="ligaChile">Liga Chile</option>
+            <option value="ligaColombia">Liga Colômbia</option>
+            <option value="ligaEquador">Liga Equador</option>
+            <option value="ligaParaguai">Liga Paraguai</option>
+            <option value="ligaPeru">Liga Peru</option>
+            <option value="ligaUruguai">Liga Uruguai</option>
+            <option value="ligaVenezuela">Liga Venezuela</option>
+            <option value="ligaIdolos">Liga Idolos</option>
+        </select> <br>
+
+        <label for="nacionalidade">nacionalidade</label>
+        <select name="nacionalidade" id="nacionalidade">
+            <option value="Brasil">Brasil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Uruguai">Uruguai</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Paraguai">Paraguai</option>
+            <option value="Equador">Equador</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Chile">Chile</option>
+            <option value="Peru">Peru</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Ucrânia">Ucrânia</option>
+            <option value="China">China</option>
+            <option value="EUA">Estados Unidos</option>
+            <option value="Italia">Itália</option>
+            <option value="Australia">Australia</option>
+            <option value="Finlandia">Finlândia</option>
+            <option value="Coreia do Sul">Coréia do Sul</option>
+            <option value="Russia">Russia</option>
+        </select> <br>
+
+        <label for="overall">Overall</label>
+        <input type="number" name="overall" id="overall"> <br>
+
+        <label for="posicao">Posição</label>
+        <select name="posicao" id="posicao">
+            <option value="Goleiro">Goleiro</option>
+            <option value="Zagueiro">Zagueiro</option>
+            <option value="LateralEsquerdo">Lateral Esquerdo</option>
+            <option value="LateralDireito">Lateral Direito</option>
+            <option value="Volante">Volante</option>
+            <option value="MeiaCentral">Meia Central</option>
+            <option value="MeiaAtacante">Meia Atacante</option>
+            <option value="PontaEsquerda">Ponta Esquerda</option>
+            <option value="PontaDireita">Ponta Direita</option>
+            <option value="Atacante">Atacante</option>
+            <option value="SegundoAtacante">Segundo Atacante</option>
+            <option value="AlaEsquerdo">Ala Esquerdo</option>
+            <option value="AlaDireito">Ala Direito</option>
+        </select> <br>
+
+        <p>Notas</p>
+
+        Ritmo<input type="number" name="ritmo" id="ritmo"> <br>
+        Finalizacao<input type="number" name="finalizacao" id="finalizacao"> <br>
+        Passe<input type="number" name="passe" id="passe"> <br>
+        Drible<input type="number" name="drible" id="drible"> <br>
+        Defesa<input type="number" name="defesa" id="defesa"> <br>
+        Físico<input type="number" name="fisico" id="fisico"> <br>
+
+        <label for="foto">Foto</label>
+        <input type="text" name="foto" id="foto"> <br>
+
+        <label for="precoMAX">Preço Máximo</label>
+        <input type="number" name="precoMax" id="precoMax"> <br>
+
+        <label for="precoMIN">Preço Mínimo</label>
+        <input type="number" name="precoMin" id="precoMin"> <br>
+
+        <label for="tipo">Tipo da Carta</label>
+        <select name="tipo" id="tipo">
+            <option value="bronze">Bronze Normal</option>
+            <option value="bronzeRaro">Bronze Raro</option>
+            <option value="prata">Prata Normal</option>
+            <option value="prataRaro">Prata Raro</option>
+            <option value="ouro">Ouro Normal</option>
+            <option value="ouroRaro">Ouro Raro</option>
+            <option value="TOTM">Team of the Month</option>
+            <option value="OnesToWatch">Ones to Watch</option>
+            <option value="Idolo">Ídolo</option>
+        </select> <br>
+
+        <input type="submit" style="padding: 5px; background: cyan; border-radius: 15px; margin-top: 25px; cursor: pointer;" value="Enviar">
+
+    </form>
+</div>

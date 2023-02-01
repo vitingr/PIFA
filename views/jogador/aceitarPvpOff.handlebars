@@ -1,0 +1,67 @@
+<div class="aceitar-batalha-container">
+
+    <h2 class="titulo-adversario">
+        Adversário Encontrado!
+    </h2>
+
+    <div class="info-container-adversario">
+
+        <div class="escudo-adversario">
+            <img src="{{adversario.escudo}}" class="escudo-adversario">
+        </div>
+
+        <div class="nome-adversario">
+            <h2 class="nome-clube-adversario">
+                {{adversario.nomeClube}}
+            </h2>
+        </div>
+
+        <div class="info-adversario">
+            <div class="text-info-adversario">
+                <ion-icon name="person-outline"></ion-icon>
+                <p>
+                    Nome do Jogador: <mark class="valor-adversario">{{adversario.nome}}</mark>
+                </p>
+            </div>
+
+            <div class="text-info-adversario">
+                <ion-icon name="trophy-outline"></ion-icon>
+                <p>
+                    Jogos Ganhos: <mark class="valor-adversario">{{adversario.jogosGanhos}}</mark>
+                </p>
+            </div>
+
+            <div class="text-info-adversario">
+                <ion-icon name="ribbon-outline"></ion-icon>
+                <p>
+                    Quantidade de Cartas: <mark class="valor-adversario">{{jogador.cartas}}</mark>
+                </p>
+            </div>
+
+            <div class="text-info-adversario">
+                <ion-icon name="star-outline"></ion-icon>
+                <p>
+                    Nível de Experiência: <mark class="valor-adversario">{{adversario.lvlXP}}</mark>
+                </p>
+            </div>
+
+            <div class="text-info-adversario">
+                <ion-icon name="stats-chart-outline"></ion-icon>
+                <p>
+                    Rank Atual: <mark class="valor-rank-adversario">{{adversario.ranking}}</mark>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="aceitar-adversario">
+            <a href="/jogador/PvpOffline/meuTime/{{partida._id}}/{{lineup}}">
+                <button>
+                    Aceitar
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+</div>

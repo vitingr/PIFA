@@ -1,0 +1,69 @@
+ <div class="amigos-pendentes-container">
+    <h1 class="titulo-amigos">
+        Convites de Amizade <ion-icon name="people-circle-outline"></ion-icon>
+    </h1>
+
+    <div class="config-top-amigos">
+        <a href="/jogador/amigos">
+            <div id="meus-amigos">
+                Amigos Adicionados
+            </div>
+        </a>
+
+        <a href="/jogador/amigosPendentes">
+            <div id="amigos-pendentes">
+                <p>
+                    Convites Pendentes
+                </p>
+                <p class="qtd-amigos-pendentes">
+                    {{jogador.convitesPendentes}}
+                </p>
+            </div>
+        </a>
+    </div>
+
+    {{#each convites}}
+
+    <div class="amigo-pendente">
+
+        <div class="foto-amigo">
+            <img src="{{escudo}}">
+        </div>
+
+        <div class="info-amigo-pendente">
+
+            <h3 class="nome-amigo-pendente">
+                {{nomeClube}}
+            </h3>
+            <p class="nome-completo-amigo-pendente">
+                {{nome}}
+            </p>
+        </div>
+
+        <div class="acoes-amigo-pendente">
+            <form action="adicionarAmigos/aceitarConvite" method="POST">
+                <input type="hidden" name="id" id="id" value="{{_id}}">
+                <button type="submit" class="confirmar-convite">
+                    Confirmar
+                </button>
+            </form>
+
+            <form action="adicionarAmigos/rejeitarConvite" method="POST">
+                <input type="hidden" name="id" id="id" value="{{_id}}">
+                <button type="submit" class="rejeitar-convite">
+                    Rejeitar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+
+    <h2 class="sem-amigos">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        Você não possui nenhum convite de Amizade Pendente!
+    </h2>
+
+    {{/each}}
+
+</div>

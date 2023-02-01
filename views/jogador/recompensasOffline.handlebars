@@ -1,0 +1,109 @@
+<div class="flex-recompensas">
+    <div class="recompensas-container">
+
+        <div class="meu-ranking-recompensas">
+            <h1>
+                {{ranking}}
+            </h1>
+            <img src="{{logo}}">
+        </div>
+
+        <div class="recompensas-pvpOffline">
+            <h1 class="recompensas-resultados">
+                {{resultado}}
+            </h1>
+
+            <h2 class="recompensas-pontos">
+                {{pontos}}
+            </h2>
+        </div>
+
+        <a href="/">
+            <button class="botao-avancar-recompensas">
+                Avançar
+            </button>
+        </a>
+
+    </div>
+
+    <div class="escalacao-container">
+
+        <!-- ATACANTES DA ESCALAÇÃO -->
+
+        <div class="container-cartas-escalacao">
+
+
+            <h1 class="time-adversario-title">
+                Time Adversário
+            </h1>
+
+            <div class="atacantes-escalacao">
+
+                <div id="carta1" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta1}}" class="img-carta-escalacao" style="display: {{background}}">
+                </div>
+
+                <div id="carta2" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta2}}" class="img-carta-escalacao">
+                </div>
+
+                <div id="carta3" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta3}}" class="img-carta-escalacao">
+                </div>
+
+            </div>
+
+            <!-- MEIO CAMPISTAS DA ESCALAÇÃO -->
+
+            <div class="meias-escalacao">
+
+                <div id="carta4" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta4}}" class="img-carta-escalacao">
+                </div>
+
+                <div id="carta5" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta5}}" class="img-carta-escalacao">
+                </div>
+
+                <div id="carta6" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta6}}" class="img-carta-escalacao">
+                </div>
+
+            </div>
+
+            <!-- ZAGUEIROS  DA ESCALAÇÃO -->
+
+            <div class="defensores-escalacao">
+
+                <div id="carta7" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta7}}" class="img-carta-escalacao">
+                </div>
+
+                <div id="carta8" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta8}}" class="img-carta-escalacao">
+                </div>
+
+                <div>
+                    <img src="{{escalacaoOponente.carta9}}" class="img-carta-escalacao">
+                </div>
+
+                <div id="carta10" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta10}}" class="img-carta-escalacao">
+                </div>
+
+            </div>
+
+            <!-- GOLEIRO DA ESCALAÇÃO -->
+
+            <div class="goleiro-escalacao">
+
+                <div id="carta11" class="carta-escalacao">
+                    <img src="{{escalacaoOponente.carta11}}" class="img-carta-escalacao">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

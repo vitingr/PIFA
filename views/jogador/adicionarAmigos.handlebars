@@ -1,0 +1,40 @@
+<div class="encontrar-amigos-container">
+    <h1 class="titulo-amigos">
+        Encontrar Amigos <ion-icon name="people-circle-outline"></ion-icon>
+    </h1>
+    
+    {{#each jogadores}}
+
+    <div class="amigo">
+        <div class="foto-amigo">
+            <img src="{{escudo}}">
+        </div>
+
+        <div class="info-amigo">
+            <h3 class="nome-amigo">
+                {{nomeClube}}
+            </h3>
+            <p class="nome-completo-amigo">
+                {{nome}}
+            </p>
+        </div>
+
+        <div class="acoes-amigo">
+            <form action="adicionarAmigos/adicionar" method="POST">
+                <input type="hidden" name="id" id="id" value="{{_id}}">
+                <button type="submit" class="enviar-convite">
+                    Enviar Convite
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+
+    <h2 class="sem-amigos">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        ERRO! Não foi possível encontrar pessoas próximas a você!
+    </h2>
+
+    {{/each}}
+</div>

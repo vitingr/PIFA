@@ -1,0 +1,26 @@
+<div class="glass-cartas">
+    <div class="container-cartas-disponiveis">
+
+        {{#each cartas}}
+
+        <div class="option-carta">
+            <div class="container-foto-carta">
+                <img src="{{fotoCarta}}" class="foto-carta">
+            </div>
+
+            <form action="" method="POST">
+                <input type="hidden" name="idCarta" id="idCarta" value="{{_id}}">
+
+                <button type="submit" class="botao-escolher-carta">
+                    Escolher
+                </button>
+            </form>
+        </div>
+
+        {{else}}
+
+        {{/each}}
+
+    </div>
+
+</div>

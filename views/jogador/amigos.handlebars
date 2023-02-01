@@ -1,0 +1,70 @@
+<div class="container-amigos">
+    <h1 class="titulo-amigos">
+        Amigos <ion-icon name="people-circle-outline"></ion-icon>
+    </h1>
+
+    <div class="config-top-amigos">
+        <a href="/jogador/amigos">
+            <div id="meus-amigos">
+                Amigos Adicionados
+            </div>
+        </a>
+
+        <a href="/jogador/amigosPendentes">
+            <div id="amigos-pendentes">
+                <p>
+                    Convites Pendentes
+                </p>
+                <p class="qtd-amigos-pendentes">
+                    {{jogador.convitesPendentes}}
+                </p>
+            </div>
+        </a>
+    </div>
+
+    {{#each amigos}}
+
+    <div class="amigo">
+        <div class="foto-amigo">
+            <img src="{{escudo}}">
+        </div>
+
+        <div class="info-amigo">
+            <h3 class="nome-amigo">
+                {{nomeClube}}
+            </h3>
+            <p class="nome-completo-amigo">
+                {{nome}}
+            </p>
+        </div>
+
+        <form action="adicionarAmigos/deletar" method="POST">
+            <input type="hidden" name="id" id="id" value="{{_id}}">
+            <button type="submit" class="botao-deletar-amigo">
+                <div class="acoes-amigo">
+                    <ion-icon name="trash-outline" class="delete-amigo"></ion-icon>
+                </div>
+            </button>
+        </form>
+    </div>
+
+    {{else}}
+
+    <h2 class="sem-amigos">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        Opss... Parece que você não tem amigos :C, que tal adicionar alguns?
+    </h2>
+
+    {{/each}}
+
+    <a href="/jogador/adicionarAmigos">
+        <button class="cta">
+            <span>Adicionar Amigos</span>
+            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+        </button>
+    </a>
+
+</div>

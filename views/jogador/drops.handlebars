@@ -1,0 +1,22 @@
+<div class="cartas-geradas-container">
+
+    {{#each cartasGeradas}}
+
+        <div class="carta-gerada">
+            <img src="{{fotoCarta}}" class="carta-gerada-jogador">
+            <div class="info-carta-gerada">
+                <h3>{{nome}}</h3>
+                <p>Preço Min: P$<mark class="precoMin"> {{precoMin}}</mark></p>
+                <p>Preco Max: P$<mark class="precoMax"> {{precoMax}}</mark></p>
+            </div>
+            <button class="botao-venda-rapida"> 
+                Venda Rápida
+            </button>
+        </div>
+
+    {{else}}
+
+    {{/each}}
+
+</div>
+

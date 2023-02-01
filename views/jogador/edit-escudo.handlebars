@@ -1,0 +1,39 @@
+<h1 class="titulo">Escolha um Escudo para o Seu Clube!</h1>
+
+
+<form action="/jogador/editarEscudo" method="POST">
+    <div class="glass-escudos">
+        <div class="container-escudos-disponiveis">
+            {{#each escudos}}
+        
+            <div class="option-escudo">
+                <div class="container-foto-escudo">
+                    <img src="{{escudo}}" class="foto-escudo">
+                </div>
+        
+                <div class="selecionarEscudo">
+                    <input type="radio" name="escudo" id="escudo" value="{{escudo}}">
+                    <h3 class="selecionar">
+                        Selecionar
+                    </h3>
+                </div>
+            </div>
+        
+            {{else}}
+        
+            {{/each}}
+        
+        </div>
+
+        <input type="hidden" name="id" value="{{jogador._id}}">
+        
+        <button class="cta">
+            <span>Confirmar Escudo</span>
+            <svg viewBox="0 0 13 10" height="10px" width="15px">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+        </button>
+    </div>
+
+</form>

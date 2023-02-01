@@ -1,0 +1,94 @@
+<div class="menu-principal-container">
+    <div class="container-inicio">
+
+        <div class="box-admin elenco" id="box-verde">
+            <div class="content-admin">
+                <div class="icon-adm" id="icon-verde"><ion-icon name="people-outline"></ion-icon></div>
+                <div class="conteudo-adm">
+                    <h2 class="title-adm">ELENCO</h2>
+                    <p class="texto-adm">Escolha seu Elenco com seus jogadores e técnicos preferidos em busca do melhor
+                        time possível!.</p>
+                    <a href="/jogador/minhasEscalacoes" class="botao-adm" id="botao-verde">ESCALAR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-admin dme" id="box-azul">
+            <div class="content-admin">
+                <div class="icon-adm" id="icon-azul"><ion-icon name="swap-horizontal-outline"></ion-icon></div>
+                <div class="conteudo-adm">
+                    <h2 class="title-adm">MERCADO</h2>
+                    <p class="texto-adm">O Mercado é uma forma dos jogadores venderem jogadores entre si de uma Maneira
+                        Eficiente..</p>
+                    <a href="/jogador/mercado" class="botao-adm" id="botao-azul">NEGOCIAR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-admin loja" id="box-rosa">
+            <div class="content-admin">
+                <div class="icon-adm" id="icon-rosa"><ion-icon name="storefront-outline"></ion-icon></div>
+                <div class="conteudo-adm">
+                    <h2 class="title-adm">LOJA</h2>
+                    <p class="texto-adm">Na Loja é possíve comprar Packs e Pifa Points a fim de conseguir novos
+                        jogadores, consumíveis e itens.</p>
+                    <a href="/jogador/loja" class="botao-adm" id="botao-rosa">COMPRAR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-admin meu-clube" id="box-laranja">
+            <div class="content-admin">
+                <div class="icon-adm" id="icon-laranja"><ion-icon name="create-outline"></ion-icon></div>
+                <div class="conteudo-adm">
+                    <h2 class="title-adm">MEU CLUBE</h2>
+                    <p class="texto-adm">Menu edição do seu clube, aqui é possível alterar seu escudo, nome e as suas
+                        configurações pessoais.</p>
+                    <a href="/jogador/meuClube" class="botao-adm" id="botao-laranja">EDITAR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pvp-inicio-container">
+
+            <h1 class="titulo-pifa-pvp">Batalhas PIFA</h1>
+
+            <div class="pvp-acoes-container">
+                <div class="pifa-pvp-left">
+                    <div class="ranking-foto">
+                        <img src="{{jogador.logoRanking}}">
+                    </div>
+                    <h2 class="ranking-nome">
+                        {{jogador.ranking}}
+                    </h2>
+                    <p class="pontos-pvp">
+                        <mark class="pvp-proximo-rank">Pontos Ranking: </mark> {{jogador.ptsRanking}} Pontos
+                    </p>
+                    <p class="ranking-global">
+                        {{jogador.jogosGanhos}} Jogos Ganhos 
+                    </p>
+                </div>
+                <div class="pifa-pvp-right">
+                    <h3 class="titulo-pvp-explicacao">
+                        Como Funciona
+                    </h3>
+                    <p class="pvp-explicacao">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, velit sequi sapiente maxime
+                        libero pariatur aut aperiam nam earum, ab reprehenderit nulla consequatur! Totam, vel?
+                        Perspiciatis saepe incidunt recusandae doloremque. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Adipisci repudiandae a sapiente officia, labore eum accusamus numquam, est
+                        porro hic eveniet doloribus blanditiis cupiditate, possimus provident nulla! Nulla, ab quae.
+                    </p>
+
+                    <a href="/jogador/pvpOffline/escolherElenco">
+                        <button class="procurar-partida-offline">
+                            Buscar Partida Offline
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

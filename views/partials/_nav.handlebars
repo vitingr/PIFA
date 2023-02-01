@@ -1,0 +1,37 @@
+<header>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="/" class="link-nav">Início</a></li>
+            <li><a href="/jogador/minhasEscalacoes" class="link-nav">Elenco</a></li>
+            <li><a href="#" class="link-nav">DME</a></li>
+            <li><a href="#" class="link-nav">Objetivos</a></li>
+            <li><a href="/jogador/loja" class="link-nav">Loja</a></li>
+            <li><a href="/jogador/amigos" class="link-nav">Amigos</a></li>
+        </ul>
+
+        <h1 class="pifa-logo">PIFA 23</h1>
+
+        <div class="perfil-container">
+            <div class="logout-nav">
+                <a href="/logout">
+                    <ion-icon name="log-out-outline" class="sair-icon-nav"></ion-icon>
+                </a>
+            </div>
+            <div class="container-nome-jogador">
+                <a href="/jogador/meuClube">
+                    <p class="nome-jogador">
+                        {{jogador.nomeClube}}
+                    </p>
+                </a>
+                <p class="dinheiro-jogador">
+                    Dinheiro: P${{jogador.dinheiro}}
+                </p>
+            </div>
+            <div class="foto-jogador-container">
+                <img src="{{jogador.escudo}}" class="foto-jogador">
+            </div>
+        </div>
+
+
+    </nav>
+</header>

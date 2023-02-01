@@ -27,6 +27,10 @@ require("./config/auth")(passport)
 
 const { Logado } = require("./helpers/estaLogado")
 
+// Configurações Connections MongoDB
+
+const db = require("./config/db")
+
 // Configuração da Sessão
 
 app.use(
@@ -67,7 +71,7 @@ app.set('view engine', 'handlebars')
 
 mongoose.set("strictQuery", false);
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/PIFA').then(() => {
+mongoose.connect(db.mongoURI).then(() => {
 
     console.log("SUCESSO! Login com o MongoDB Realizado com Sucesso!")
 
@@ -292,7 +296,7 @@ app.use((req, res, next) => {
 
 // Inicialização
 
-const porta = 3030
+const porta = process.env.PORT || 3000
 
 app.listen(porta, () => {
     console.log(`SUCESSO! Servidor Funcionando na Porta ${porta}`)

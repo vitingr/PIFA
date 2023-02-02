@@ -296,9 +296,9 @@ app.use((req, res, next) => {
 
 // Inicialização
 
-const porta = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 
-app.listen(porta, () => {
-    console.log(`SUCESSO! Servidor Funcionando na Porta ${porta}`)
+app.listen(PORT, () => {
+    console.log(`SUCESSO! Servidor Funcionando na Porta ${PORT}`)
 })
 

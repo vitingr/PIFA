@@ -4,6 +4,6 @@ if (process.env.NODE_ENV == "production") {
 
 } else {
 
-    module.exports = {mongoURI: "mongodb://localhost/PIFA"}
+    module.exports = {mongoURL: "mongodb://localhost:PIFA"}
 
 }

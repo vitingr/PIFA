@@ -9,7 +9,7 @@ module.exports = {
         
         }
         
-        res.render('usuario/inicio', {error_msg: 'Você precisar estar Logado para Acessar!'})
+        res.render('usuario/inicio', {error_msg: 'Você precisa estar Logado para Acessar!'})
 
     }
 }

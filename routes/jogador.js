@@ -827,7 +827,6 @@ router.get("/mercado", (req, res) => {
 
 router.get("/meuClube", (req, res) => {
 
-
     const jogadorLogado = {
         id: req.user._id,
         nome: req.user.nome,
@@ -937,6 +936,8 @@ router.get("/listarCarta/:id", (req, res) => {
     }
 
     CartaGerada.findOne({ _id: req.params.id }).lean().then((carta) => {
+
+        console.log(carta)
 
         res.render("jogador/listar-carta", { carta: carta, jogador: jogadorLogado })
 

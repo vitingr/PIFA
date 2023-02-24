@@ -183,7 +183,7 @@ app.post("/cadastrar", (req, res) => {
     }
 
     if (erros.length > 0) {
-
+  
         console.log(erros)
         res.render("usuario/cadastro", { erros: erros })
 

@@ -893,6 +893,7 @@ header {
 }
 
 .shape-top {
+    margin-bottom: -2px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 520px;
@@ -1217,6 +1218,12 @@ header {
     width: 650px;
     height: 115px;
     background: white;
+}
+
+.carta-gerada a {
+    width: 400px;
+    background: none;
+    text-decoration: none;
 }
 
 .carta-gerada-jogador {

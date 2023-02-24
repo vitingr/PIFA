@@ -9,9 +9,12 @@
                 <p>Preço Min: P$<mark class="precoMin"> {{precoMin}}</mark></p>
                 <p>Preco Max: P$<mark class="precoMax"> {{precoMax}}</mark></p>
             </div>
-            <button class="botao-venda-rapida"> 
-                Venda Rápida
-            </button>
+            
+            <a href="/jogador/listarCarta/{{_id}}">
+                <button class="botao-venda-rapida">
+                    Vender
+                </button>
+            </a>
         </div>
 
     {{else}}

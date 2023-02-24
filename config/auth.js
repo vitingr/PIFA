@@ -21,7 +21,7 @@ module.exports = (passport) => {
 
                     if (!usuario) {
                         console.log("ERRO! Essa Conta não Existe!")
-                        return done(null, false, { message: "Está Conta não Existe" }) // null = error | false = user
+                        return done(null, false, { message: "Essa Conta não Existe" }) // null = error | false = user
                     }
 
                     bcrypt.compare(senha, usuario.senha, (erro, sucesso) => {  // Verificador do Hash para verificar se a senha hashesada equivale a senha digitada
@@ -45,7 +45,7 @@ module.exports = (passport) => {
                     })
 
                 })
-
+  
             }))
 
     // Assim que o usuário logar no seu site, os dados dele vão ser salvos com a Sessão
